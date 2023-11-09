@@ -15,6 +15,8 @@ public class MainClass {
 		System.out.println("Hello and welcome the the red black tree extravaganza!");
 		System.out.println("This main method will allow you as a user to add nodes to a red black tree "
 				+ "\n(as (int, String) pairs) and also print all of the nodes in order. Have fun!\n");
+		System.out.println("NOTE: When printing the tree it will print in an in-order ordering and\n"
+				+ "square brackets [ ] will surround each subtree while parentheses will surround each node");
 		
 		do {
 			System.out.print("Enter a 1 to add a node to the tree, enter a 2 to print the in order representation of the"

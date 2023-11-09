@@ -4,8 +4,10 @@
  */
 public class RedBlackTree {
 	
+	//enum for colors of nodes
 	enum color {BLACK, RED};
 	
+	//nested class for the nodes of the tree
 	public class node {
 		public int key;
 		public String value;
@@ -14,7 +16,7 @@ public class RedBlackTree {
 		public node left;
 		public node right;
 		
-		
+		//node constructor
 		public node(int key, String value) {
 			this.key = key;
 			this.value = value;
@@ -24,15 +26,17 @@ public class RedBlackTree {
 			this.right = null;
 		}
 		
+		//traverse to step through the entire tree
 		public String traverse() {
 			String returnStr = "";
 			
+			//brackets surround subtrees, parentheses surround individual nodes
 			if (this.left != null) {
-				returnStr += this.left.traverse() + ", ";
+				returnStr += "[" + this.left.traverse() + "] ";
 			}
 			returnStr += "((" + this.key + ", " + this.value + "), " + this.nodeColor + ")";
 			if (this.right != null) {
-				returnStr += ", " + this.right.traverse();
+				returnStr += " [" + this.right.traverse() + "]";
 			}
 			
 			return returnStr;
